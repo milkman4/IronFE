@@ -4,7 +4,7 @@ var { foodCounter, addItems, addList, createNewList, addNewItem, displayThis,
 
 describe('IronFE', function() {
 
-  it.skip('should create an array of strings', function() {
+  it('should create an array of strings', function() {
     let obj = { kale: 12, apple: 5 };
     let array = ['kale', 'apple'];
 
@@ -13,7 +13,7 @@ describe('IronFE', function() {
     assert.deepEqual(displayThis(obj, array), answer);
   });
 
-  it.skip('should add new item', function() {
+  it('should add new item', function() {
     let obj = { kale: 12, apple: 5 }
 
     let answer = { kale: 12, apple: 5, avocado: 4  }
@@ -22,7 +22,7 @@ describe('IronFE', function() {
     assert.deepEqual(obj, answer);
   });
 
-  it.skip('should add items to apple', function() {
+  it('should add items to apple', function() {
     let obj = { kale: 12, apple: 5, orange: 8, garlic: 130,
                   banana: 8, avocado: 44 }
 
@@ -31,7 +31,7 @@ describe('IronFE', function() {
     assert.deepEqual(addItems(obj, 'apple', 4), answer);
   });
 
-  it.skip('should combine both the arrays into one object using reduce', function() {
+  it('should combine both the arrays into one object using reduce', function() {
     let amount = [12, 5, 8, 130, 8, 44]
     let foodNames = ['kale', 'apple', 'orange', 'garlic',
                       'banana', 'avocado' ]
@@ -43,20 +43,20 @@ describe('IronFE', function() {
   });
 
 
-  it.skip('should add both objects using reduce', function() {
+  it('should add both objects using reduce', function() {
     let og = { kale: 12, apple: 5, orange: 8, garlic: 130,
                banana: 8, avocado: 44 };
     let add = { kale:2, apple: 1, orange: 3, garlic: 4,
-                banana: 2, avocado: 3 };
+                banana: 2, avocado: 3, stuff: 4 };
 
     let answer = { kale: 14, apple: 6, orange: 11, garlic: 134,
-                   banana: 10, avocado: 47 };
+                   banana: 10, avocado: 47, stuff: 4 };
 
     assert.deepEqual(createNewList(og, add), answer);
     assert.notDeepEqual(og, answer);
   });
 
-  it.skip('should add both objects together using forEach', function() {
+  it('should add both objects together using forEach', function() {
     let og = { kale: 12, apple: 5, orange: 8, garlic: 130,
                   banana: 8, avocado: 44 };
     let add = { kale:2, apple: 1, orange: 3, garlic: 4,
@@ -66,10 +66,9 @@ describe('IronFE', function() {
                   banana: 10, avocado: 47 };
 
     assert.deepEqual(addList(og, add), answer);
-    assert.deepEqual(og, answer);
   });
 
-  it.skip('should add both objects together, bad data should be 0', function() {
+  it('should add both objects together, bad data should be 0', function() {
     let og = { kale: null, apple: 5, orange: null, garlic: 130,
                   banana: 8, avocado: 44 };
     let add = { kale: null, apple: null, orange: 3, garlic: 4,
@@ -79,10 +78,9 @@ describe('IronFE', function() {
                   banana: 10, avocado: 47 };
 
     assert.deepEqual(addList(og, add), answer);
-    assert.deepEqual(og, answer);
   });
 
-  it.skip('should find the total of each category' , function() {
+  it('should find the total of each category' , function() {
     let list = { kale: {dino: 1, baby: 5 }, apple: { honeycrisp: 1, fuji: 5 },
     lettuce: { romaine: 2, iceburg: 2  } };
 
